@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Sick Colors</Title>
+    </head>
+    <center><body>
+            <p id="colorchange">
+                The Kansas Jayhawks have won 12 Big 12 regular season titles in a row, which is perhaps the most impressive statistic going in college basketball.
+
+                In a sport full of roster turnover, Bill Self has been a constant. And his Jayhawks have constantly dominated the Big 12 over the past decade and change. Kansas doesn't seem to be slowing down any time soon, but you'd have to think that one of these years a conference foe will rise up and dethrone the Jayhawks.
+                </br></br>
+                <a href="http://www.ncaa.com/news/basketball-men/article/2016-09-19/college-basketball-will-kansas-win-its-13th-big-12-title-row">Source</a>
+            </p>
+        <h3 id="header">Change Colors: </h3></br>
+            <button type="button" onclick="javascript:background()">Background</button>
+            <button type="button" onclick="javascript:borderColor()">Border</button>
+    </body></center>
+    <script type="text/javascript">
+        var color = document.getElementById("colorchange");
+        var x = 0;
+        function background(){
+            x++;
+            if(x == 1) {
+                color.style.backgroundColor = "red";
+            }
+            else if(x == 2) {
+                color.style.backgroundColor = "blue"; 
+            }
+            else if(x == 3) {
+                color.style.backgroundColor = "green";
+                x = 0;
+            }
+        }
+        var y = 0;
+        function borderColor(){
+            y++;
+            if(y == 1) {
+                color.style.border = "20px solid red";
+            }
+            else if(y == 2) {
+                color.style.border = "20px solid blue"; 
+            }
+            else if(y == 3) {
+                color.style.border = "20px solid green";
+                y = 0;
+            }
+        }
+    </script>
+</html>

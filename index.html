@@ -1,0 +1,32 @@
+<html>
+    <center><head>
+        <title>Password Validation</title>
+    </head></center>
+    <center><form>
+        <p>First Name:</p></br>
+        <input type="text" id="firstname" value=""></input></br>
+        <p>Last Name:</p></br>
+        <input type="text" id="lastname" value=""></input></br>
+        <p>Password:</p></br>
+        <input type="password" id="password" value=""></input></br>
+        <p>Verify Password:</p></br>
+        <input type="password" id="verifypassword" value=""></input></br>
+        <button type="submit" onclick="javascript:verifypasswords()">Submit</button>
+    </form></center>
+    <script type="text/javascript">
+        function verifypasswords() {
+            if(document.getElementById("password").value.length < 8)
+            {
+                alert("The password is not eight carachters long");
+            }
+            else if(document.getElementById("password").value != document.getElementById("verifypassword").value)
+            {
+                alert("The passwords entered do not match");
+            }
+            else if(document.getElementById("password").value == document.getElementById("verifypassword").value)
+            {
+                alert("The passwords entered match");
+            }
+        }
+    </script> 
+</html>

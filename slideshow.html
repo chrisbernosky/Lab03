@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <Title>Reall Cool Slide Show</Title>
+        <center><h1>The University of Kansas</h1></center>
+    </head>
+    <center><body>
+        <img src="img/1.jpg" id="image" style="width: 400px; height: 350px;"></img></br></br></br>
+        <button onclick="javascript:back()" id="back">Previous</button>
+        <button onclick="javascript:forward()" id="forward">Next</button>
+    </body></center>
+    <script type="text/javascript">
+        var x= 1;
+        function forward(){
+            x++;
+            var path = "img/"+x+".jpg";
+            if(x <= 5){
+                document.getElementById("image").src = path;
+            }
+            else{
+                x = 1;
+                path = "img/"+x+".jpg";
+                document.getElementById("image").src = path;
+            }
+        }
+        function back() {
+            x--;
+            var path = "img/"+x+".jpg";
+            if(x >= 1){
+                document.getElementById("image").src = path;
+            }
+            else{
+                x = 5;
+                path = "img/"+x+".jpg";
+                document.getElementById("image").src = path;
+            }
+        }
+    </script>
+<html>
